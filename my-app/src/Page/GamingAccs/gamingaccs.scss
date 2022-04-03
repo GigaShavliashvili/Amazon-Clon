@@ -1,0 +1,28 @@
+.Banner {
+  padding-top: 15rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.GaminAccs {
+  &__Header {
+    text-align: center;
+    padding: 1rem;
+    h1 {
+      font-weight: 400;
+    }
+  }
+  &__Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 4rem 2rem;
+    & .item {
+      text-align: center;
+      color: black;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

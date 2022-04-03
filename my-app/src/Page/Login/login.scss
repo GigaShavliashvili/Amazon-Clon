@@ -1,0 +1,117 @@
+@use "../../scss/" as *;
+
+.Login {
+  & .Login-center {
+    border-bottom: 1px solid rgb(194, 194, 194);
+    padding-bottom: 1rem;
+    box-shadow: 0px 5px 5px rgba(223, 223, 223, 0.568);
+  }
+
+  &__Header {
+    padding: 1rem;
+    text-align: center;
+    img {
+      width: 150px;
+    }
+  }
+  &__Wrapper {
+    @include flex(center, center);
+    flex-direction: column;
+    max-width: 23rem;
+
+    &__Content {
+      padding: 1rem;
+      border: 1px solid rgb(221, 221, 221);
+      border-radius: 5px;
+      h1 {
+        font-weight: 400;
+      }
+      h5 {
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      form {
+        input {
+          font-size: 13px;
+          margin-top: 3px;
+          width: 100%;
+          padding: 8px;
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid rgb(189, 189, 189);
+          &:focus {
+            border: 1px solid $secons-main-color;
+            box-shadow: 0px 0px 4px $secons-main-color;
+          }
+        }
+        & .LoginBtn {
+          margin-top: 10px;
+          width: 100%;
+          background: $main-color;
+        }
+        p {
+          font-size: 13px;
+          margin-top: 20px;
+        }
+        span {
+          display: block;
+          margin-top: 20px;
+          font-size: 13px;
+        }
+      }
+    }
+    &__Content2 {
+      overflow: hidden;
+      margin-top: 20px;
+      width: 100%;
+      & .Cont2Btn {
+        margin-top: 20px;
+        width: 100%;
+        background: rgb(211, 211, 211);
+      }
+    }
+  }
+
+  & .Footer {
+    & .row1 {
+      padding: 1.5rem;
+      @include flex(center, center);
+      li {
+        list-style: none;
+        margin: auto 10px;
+        font-size: 13px;
+      }
+    }
+    & .row2 {
+      @include flex(center, center);
+      font-size: 13px;
+      color: rgb(121, 121, 121);
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+.lineword {
+  font-size: 13px;
+  color: rgb(156, 156, 156);
+  text-align: center;
+  width: 100%;
+}
+.lineword:before,
+.lineword:after {
+  background-color: rgb(226, 226, 226);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.lineword:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.lineword:after {
+  left: 0.5em;
+  margin-right: -50%;
+}

@@ -1,0 +1,92 @@
+@use "../../scss/" as *;
+.GiftIdeas-Section {
+  position: relative;
+  background: white;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  &__Header {
+    margin-top: 10px;
+    border-top: 1px solid rgb(184, 184, 184);
+    @include flex(center, space-between);
+  }
+  &__Items {
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding: 1.5rem 3rem;
+    font-size: 90%;
+    @include flex(top, center);
+
+    & .Item {
+      max-width: 10rem;
+      padding: 0px 1rem;
+      & .image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-top: 10rem;
+      }
+
+      &__Detail {
+        padding: 5px;
+        & .title {
+          font-weight: 600;
+          color: rgb(13, 124, 128);
+        }
+        & .author {
+          font-size: 12px;
+          color: rgb(13, 124, 128);
+        }
+        & .stars {
+          color: rgb(13, 124, 128);
+        }
+        & .price {
+          h4 {
+            font-size: 15px;
+            font-weight: 500;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .prev {
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 10px;
+    padding: 7px;
+    box-shadow: $shadows;
+    @include flex(center, center);
+    cursor: pointer;
+    top: 40%;
+  }
+
+  .next {
+    top: 40%;
+    @include flex(center, center);
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: $shadows;
+    position: absolute;
+    right: 30px;
+    border: 1px solid rgb(184, 184, 184);
+    cursor: pointer;
+  }
+}
+.Recomendation {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 85%;
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+.recbtn {
+  width: 200px;
+  font-weight: 700;
+  border: 1px solid rgb(255, 145, 0);
+  margin: 8px;
+}

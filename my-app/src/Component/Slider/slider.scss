@@ -1,0 +1,74 @@
+@use "../../scss/" as *;
+.HomeSlider {
+  position: relative;
+}
+.HomeSlider__Center {
+  height: 250px;
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+
+  & .prev {
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    top: 2px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 70px;
+    &:focus {
+      border-radius: 5px;
+      border: 2px solid rgb(4, 137, 147);
+      outline: 2px solid white;
+    }
+  }
+  & .next {
+    position: absolute;
+    z-index: 100;
+    right: 0px;
+    top: 2px;
+    width: 70px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:focus {
+      border-radius: 5px;
+      border: 2px solid rgb(4, 137, 147);
+      outline: 2px solid white;
+    }
+  }
+  svg {
+    font-size: 40px;
+    font-weight: 100;
+    color: #131921;
+  }
+}
+article {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.activSlider {
+  opacity: 1;
+  transform: translate(0);
+}
+.lastSlider {
+  transform: translateX(-100%);
+}
+.nextSlider {
+  transform: translateX(100%);
+}
+
+.banner {
+  img {
+    width: 100%;
+  }
+}

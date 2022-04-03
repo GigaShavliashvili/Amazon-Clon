@@ -1,0 +1,9 @@
+@use "../../scss/" as *;
+.btn {
+  padding: 10px;
+  background: $secons-main-color;
+  border: none;
+  box-shadow: $shadows;
+  border-radius: 10px;
+  cursor: pointer;
+}

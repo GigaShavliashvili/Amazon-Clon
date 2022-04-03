@@ -1,0 +1,53 @@
+@use "../../scss/" as *;
+.ProductMenu {
+  padding: 1rem;
+  input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 5px;
+  }
+
+  li {
+    list-style: none;
+  }
+  div {
+    margin-top: 1rem;
+  }
+
+  & .Color {
+    width: 200px;
+    div {
+      margin-top: 0;
+    }
+    & .spans {
+      display: flex;
+      justify-content: space-between;
+      span {
+        width: 1.5rem;
+        height: 1.5rem;
+        box-shadow: 1px 1px 3px rgba(114, 114, 114, 0.438) inset;
+      }
+    }
+  }
+  & .Price {
+    button {
+      height: 30px;
+      padding: 0px 5px;
+      border-radius: 10px;
+      background: none;
+      outline: none;
+      border: 1px solid gray;
+      box-shadow: $shadows;
+    }
+    form {
+      width: 140px;
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: 50px;
+        height: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

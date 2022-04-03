@@ -1,0 +1,37 @@
+@use "../../scss/" as *;
+
+.productlist {
+  padding: 1rem;
+  flex: 1;
+  & .item {
+    width: 100%;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    display: flex;
+    &__image {
+      padding: 0px 3rem;
+      background: rgb(248, 248, 248);
+    }
+    &__content {
+      padding: 0.5rem;
+      h3 {
+        font-weight: 400;
+      }
+
+      &__button {
+        @include flex(center, center);
+        flex-direction: column;
+        width: 200px;
+        & .Cart {
+          background: $main-color;
+          color: white;
+        }
+        & .List {
+          background: rgb(211, 211, 211);
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+}

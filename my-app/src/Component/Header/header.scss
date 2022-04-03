@@ -1,0 +1,182 @@
+@use "../../scss/" as *;
+.Header {
+}
+
+.Header__Wrapper {
+  background-color: #131921;
+  padding: 0.2rem 1rem;
+  @include flex(center, unset);
+  &__Logo {
+    padding: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    img {
+      width: 100px;
+    }
+  }
+  &__Option {
+    padding: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    position: relative;
+    img {
+      width: 30px;
+    }
+    p {
+      font-size: 13px;
+      color: rgb(226, 226, 226);
+    }
+    h5 {
+      color: white;
+    }
+    svg {
+      color: rgb(206, 206, 206);
+    }
+  }
+
+  &__Search {
+    flex: 3;
+    min-width: 25rem;
+    height: 2.5rem;
+    form {
+      height: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      @include flex(center, center);
+      gap: 0px;
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 5px;
+        outline: none;
+      }
+
+      select {
+        border: none;
+        border-right: 1px solid rgb(216, 216, 216);
+        height: 100%;
+        background-color: var(--second-bg);
+        text-align: center;
+        outline: none;
+        color: rgb(107, 107, 107);
+      }
+      button {
+        border: none;
+        @include flex(center, center);
+        background: var(--main-color);
+        height: 100%;
+        width: 3.2rem;
+        cursor: pointer;
+        svg {
+          font-size: 30px;
+          color: rgb(42, 42, 42);
+        }
+      }
+    }
+    form :focus {
+      border: 3px solid rgb(255, 166, 0);
+    }
+  }
+  &__Option:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+  }
+  &__Logo:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+  }
+}
+.CartName {
+  display: inline-block;
+  font-family: 700;
+  color: white;
+  transform: translateY(8px);
+}
+
+.Header__Wrapper2 {
+  background-color: #222f41;
+  padding: 0.2rem 1rem;
+  ul {
+    @include flex(center, unset);
+    li {
+      @include flex(center, center);
+      color: white;
+      margin: 0px 5px;
+      padding: 3px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid #222f41;
+      &:hover {
+        border: 1px solid #ffffff;
+      }
+    }
+  }
+}
+
+.logout {
+  display: none;
+}
+
+.UserLog:hover .logout {
+  display: block;
+  color: black;
+  background: white;
+  position: fixed;
+  top: 3.6rem;
+  right: 3.6rem;
+  z-index: 101;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.UserLog:hover {
+  &::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.513);
+    top: 0;
+    z-index: 88;
+    left: 0;
+  }
+}
+.logout .col1 {
+  text-align: center;
+  p {
+    color: rgb(95, 95, 95);
+    margin-top: 10px;
+  }
+  button {
+    width: 200px;
+  }
+}
+.logout .col2 {
+  border-top: 1px solid rgb(231, 231, 231);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  ul {
+    margin-top: 10px;
+  }
+  ul li {
+    font-size: 14px;
+    color: gray;
+  }
+}
+.logout .col2 .row1 {
+  padding-right: 1rem;
+  border-right: 1px solid rgb(231, 231, 231);
+}
+.logout .col2 .row2 {
+  padding-left: 1rem;
+}
+
+.Logout {
+  p {
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
